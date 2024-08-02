@@ -23,9 +23,6 @@ const db = getFirestore(app);
 console.log("Api Key: ", firebaseConfig.apiKey );
 console.log("Is database connected: ", db);
 
-
-
-
 // Initialize Analytics only on the client-side
 let analytics;
 if (typeof window !== "undefined") {

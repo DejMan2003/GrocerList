@@ -25,9 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+input {
+  color: black;
+}
+
+/* styles.css */
+.background-image-class {
+  background-image: url('public/img/planes.png');
+  background-size: cover; /* Cover ensures the image covers the container */
+  background-position: center; /* Center aligns the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100%; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.fontStyles
+{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.radius
+{
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
