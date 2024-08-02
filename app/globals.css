@@ -31,7 +31,7 @@ input {
 
 /* styles.css */
 .background-image-class {
-  background-image: url('public/img/planes.png');
+  background-image: url('public/img/notebook.jpeg');
   background-size: cover; /* Cover ensures the image covers the container */
   background-position: center; /* Center aligns the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
