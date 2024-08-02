@@ -30,9 +30,11 @@ export default function Home() {
       querySnapshot.forEach((doc) => {
         itemsArr.push({ ...doc.data(), id: doc.id });
       });
+      setItems(itemsArr); // Update the state with the fetched items
     });
     return () => unsubscribe();
   }, []);
+  
 
   // Delete data from database.
   const deleteItem = async (id) => {
@@ -99,6 +101,7 @@ export default function Home() {
             .map((item, id) => (
               <li key={id} className='my-4 text-black w-full flex justify-between my-5'>
                 <div className='p-4 w-full flex justify-between'>
+                {console.log(" Here are the items: ",items)}
                   <span className='capitalize text-4lg'>{item.name}</span>
                 </div>
                 <button 

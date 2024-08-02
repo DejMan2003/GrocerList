@@ -2,17 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDB4mdiYRojZ1052hAfxF1jpap91tNhSN4",
   authDomain: "grocerlist-fa442.firebaseapp.com",
   projectId: "grocerlist-fa442",
   storageBucket: "grocerlist-fa442.appspot.com",
-  messagingSenderId: "69053931962",
+  messagingSenderId:"69053931962",
   appId: "1:69053931962:web:f2869faa0a91332afafd83",
-  measurementId: "G-SG8THWJ055"
+  measurementId:"G-SG8THWJ055"
 };
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
