@@ -10,7 +10,6 @@ export default function Home() {
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState({ name: '' });
   const [searchQuery, setSearchQuery] = useState('');
-
   // Add Item to Database
   const addItem = async (e) => {
     e.preventDefault();
@@ -71,8 +70,8 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between sm:p-24 background-image-class">
-      <div className={"z-10 max-w-5xl w-full items-center justify-between font-mono text-sm "}>
+    <main className="flex min-h-screen flex-col items-center justify-between sm:p-24 background-image-class font-handwritten">
+      <div className={"z-10 max-w-5xl w-full items-center justify-between text-sm "}>
         <h1 className="text-4xl p-4 text-center text-black">Grocer List</h1> 
         <input
           type="text"
@@ -83,7 +82,7 @@ export default function Home() {
         />
         <button onClick={searchItems} className="text-white bg-slate-950 hover:bg-slate-900 radius  p-3 text-xl">Search</button>
 
-        <div className=' bg-slate-800 p-5 rounded-lg bg-orange items-center'>
+        <div className=' p-5 rounded-lg items-center'>
           <form className="grid grid-cols-6 text-black mx-auto" onSubmit={addItem}>
             <input 
               value={newItem.name} 
@@ -99,14 +98,14 @@ export default function Home() {
             {items
             .sort((a, b) => a.name.localeCompare(b.name)) // Sort items alphabetically
             .map((item, id) => (
-              <li key={id} className='my-4 text-black w-full flex justify-between my-5'>
+              <li key={id} className='my-4 font-bold text-black w-full flex justify-between my-5'>
                 <div className='p-4 w-full flex justify-between'>
                 {console.log(" Here are the items: ",items)}
-                  <span className='capitalize text-4lg'>{item.name}</span>
+                  <span className='capitalize text-5lg'>{item.name}</span>
                 </div>
                 <button 
                   onClick={() => deleteItem(item.id)} 
-                  className='text-white bg-slate-950 hover:bg-slate-900 p-3 mx-4 text-xl'>
+                  className='text-white bg-slate-950 rounded-lg hover:bg-slate-900 p-3 mx-4 text-xl'>
                   Remove
                 </button>
               </li>
